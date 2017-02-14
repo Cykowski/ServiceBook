@@ -6,17 +6,22 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 public class Part {
-	
-
-	protected LocalDate purchaseDate;
-	protected LocalDate lastServiceDate;
-	protected LocalDate expireDate;
-
-	protected BigDecimal	purchasePrice;
-	protected BigDecimal	servicePrice;
-	
-	protected String	description;
-	protected String	name;
+/// General data
+	protected	String		description; 
+	protected	String		name;
+/// ODO details 
+	protected	int			mountedAt;
+	protected	int			durability;	
+/// Dates 
+	protected	LocalDate 	purchaseDate;
+	protected	LocalDate 	lastServiceDate;
+	protected	LocalDate 	expireDate;
+/// Costs
+	protected	BigDecimal	purchasePrice;
+	protected	BigDecimal	servicePrice;
+/// Service details (not mandatory at all)
+	protected	String		tools;
+	protected	String		consumables;
 	
 	final protected DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd");
 
