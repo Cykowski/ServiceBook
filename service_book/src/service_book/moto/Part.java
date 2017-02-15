@@ -139,6 +139,54 @@ public class Part {
 	public void setName(String name) {
 		this.name = name.toUpperCase();
 	}
+
+
+
+	public int getMountedAt() {
+		return mountedAt;
+	}
+
+
+
+	public void setMountedAt(int mountedAt) {
+		this.mountedAt = mountedAt;
+	}
+
+
+
+	public int getDurability() {
+		return durability;
+	}
+
+
+
+	public void setDurability(int durability) {
+		this.durability = durability;
+	}
+
+
+
+	public String getTools() {
+		return tools;
+	}
+
+
+
+	public void setTools(String tools) {
+		this.tools = tools;
+	}
+
+
+
+	public String getConsumables() {
+		return consumables;
+	}
+
+
+
+	public void setConsumables(String consumables) {
+		this.consumables = consumables;
+	}
 	
 	
 
