@@ -4,8 +4,8 @@ public class Moto {
 
 	
 	
-	static public void main(String[] args)
-	{
-		System.out.println("HELLO WORLD");
-	}
+//	static public void main(String[] args)
+//	{
+//		System.out.println("HELLO WORLD");
+//	}
 }
