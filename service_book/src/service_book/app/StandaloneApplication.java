@@ -1,4 +1,4 @@
-package service_book.moto;
+package service_book.app;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -10,6 +10,7 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import service_book.files.LoadConfig;
 
 public class StandaloneApplication extends Application {
 
@@ -60,8 +61,10 @@ public class StandaloneApplication extends Application {
 	}
 
 	public static void main(String[] args) {
-		launch(args);
 
+		LoadConfig.readConf();
+
+		launch(args);
 	}
 
 }
