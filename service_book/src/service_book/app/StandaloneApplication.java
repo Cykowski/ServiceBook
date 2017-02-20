@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TitledPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -29,15 +30,16 @@ public class StandaloneApplication extends Application {
 		
 
 		try {
-			TitledPane root = (TitledPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
-			Scene scene = new Scene(root,400,400);
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
+			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		
 //        Button btn = new Button();
 //        btn.setText("Say 'Hello World'");
@@ -62,7 +64,6 @@ public class StandaloneApplication extends Application {
 
 	public static void main(String[] args) {
 
-		LoadConfig.readConf();
 
 		launch(args);
 	}

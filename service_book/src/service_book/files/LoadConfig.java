@@ -5,34 +5,54 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
+import java.util.Enumeration;
 import java.util.Properties;
 
 public class LoadConfig {
 
+	public static File file = new File("resources/config.properties");
+	public static Enumeration enuKeys;
+	public static Properties properties = new Properties();
 	
 	public static void readConf()
 	{
-		
 		try {
-			File file = new File("resources/config.properties");
 			FileInputStream fileInput = new FileInputStream(file);
-			Properties properties = new Properties();
 			properties.load(fileInput);
-			System.out.println("costam: " + properties.getProperty("testproperty"));
-			fileInput.close();
-
-//	ZAPISYWANIE DO PLICZKU:)
-//			FileOutputStream fileOut = new FileOutputStream(file);
-//			properties.setProperty("new", ";)")	;		
-//			properties.store(fileOut, "no com");
-//			fileOut.close();
+//			Enumeration enuKeys = properties.keys();
+			enuKeys = properties.keys();
+//			while (enuKeys.hasMoreElements()) {
+//				String key = (String) enuKeys.nextElement();
+//				String value = properties.getProperty(key);
+//				System.out.println(key + value);
+//			}
 			
+			fileInput.close();
 		} catch (FileNotFoundException ex) {
 			ex.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
+
+//	ZAPISYWANIE DO PLICZKU:)
+	public static void saveConf()
+	{
+		Date time = new Date(System.currentTimeMillis());
+		try {
+			FileOutputStream fileOut = new FileOutputStream(file);		
+			properties.store(fileOut, time.toString());
+			fileOut.close();
+		} catch (FileNotFoundException ex) {
+			ex.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+//	public static void 
+	
+	
+	
 }
