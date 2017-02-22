@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -17,6 +18,12 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#readConfig" text="Read Conf" />
                   <Button mnemonicParsing="false" onAction="#nextProperty" prefHeight="31.0" prefWidth="88.0" text="Button" />
+                  <TextField fx:id="descInput" />
+                  <TextField fx:id="nameInput" />
+                  <Button mnemonicParsing="false" onAction="#addPart" text="New Part" />
+                  <TextField fx:id="radInput" />
+                  <Button mnemonicParsing="false" onAction="#addWheel" text="New Wheel" />
+                  <Button mnemonicParsing="false" onAction="#showVehicleParts" text="Show All" />
                </children>
             </VBox>
          </left>

@@ -1,4 +1,4 @@
-package service_book.moto;
+package service_book.vehicle;
 
 import java.math.BigDecimal;
 import org.joda.time.*;
@@ -31,8 +31,12 @@ public class Part {
 		this.lastServiceDate = LocalDate.now();
 		this.expireDate = LocalDate.now().plusYears(1);  
 	}
-
-
+	
+	public Part(String description, String name){
+		this();
+		this.setDescription(description);
+		this.setName(name);
+	}
 
 	public LocalDate getPurchaseDate() {
 		return purchaseDate;
@@ -72,13 +76,9 @@ public class Part {
 		}
 	}
 
-
-
 	public LocalDate getExpireDate() {
 		return expireDate;
 	}
-
-
 
 	public void setExpireDate(String expireDate) {
 		try {
@@ -92,18 +92,13 @@ public class Part {
 		}
 	}
 
-
-
 	public BigDecimal getPurchasePrice() {
 		return purchasePrice;
 	}
 
-
-
 	public void setPurchasePrice(BigDecimal purchasePrice) {
 		this.purchasePrice = purchasePrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 	}
-
 
 
 	public BigDecimal getServicePrice() {
@@ -189,5 +184,9 @@ public class Part {
 	}
 	
 	
+	
+	public void showPart(){
+		System.out.println("PART: " + this.getName() + " Desc:" + this.getDescription());
+	}
 
 }

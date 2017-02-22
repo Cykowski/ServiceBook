@@ -20,7 +20,6 @@ public class LoadConfig {
 		try {
 			FileInputStream fileInput = new FileInputStream(file);
 			properties.load(fileInput);
-//			Enumeration enuKeys = properties.keys();
 			enuKeys = properties.keys();
 //			while (enuKeys.hasMoreElements()) {
 //				String key = (String) enuKeys.nextElement();
@@ -35,7 +34,7 @@ public class LoadConfig {
 			e.printStackTrace();
 		}
 	}
-
+	
 //	ZAPISYWANIE DO PLICZKU:)
 	public static void saveConf()
 	{
