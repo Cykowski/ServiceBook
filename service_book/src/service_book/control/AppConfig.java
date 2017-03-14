@@ -1,4 +1,4 @@
-package service_book.files;
+package service_book.control;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,13 +9,15 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.Properties;
 
-public class LoadConfig {
+import service_book.Book;
+
+public class AppConfig {
 
 	public static File file = new File("resources/config.properties");
 	public static Enumeration enuKeys;
 	public static Properties properties = new Properties();
 	
-	public static void readConf()
+	public static int readConf()
 	{
 		try {
 			FileInputStream fileInput = new FileInputStream(file);
@@ -29,14 +31,17 @@ public class LoadConfig {
 			
 			fileInput.close();
 		} catch (FileNotFoundException ex) {
-			ex.printStackTrace();
+//			ex.printStackTrace();
+			return(Book.COMMONERROR);
 		} catch (IOException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			return(Book.COMMONERROR);
 		}
+		return(0);
 	}
 	
 //	ZAPISYWANIE DO PLICZKU:)
-	public static void saveConf()
+	public static int saveConf()
 	{
 		Date time = new Date(System.currentTimeMillis());
 		try {
@@ -44,10 +49,13 @@ public class LoadConfig {
 			properties.store(fileOut, time.toString());
 			fileOut.close();
 		} catch (FileNotFoundException ex) {
-			ex.printStackTrace();
+//			ex.printStackTrace();
+			return(Book.COMMONERROR);
 		} catch (IOException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			return(Book.COMMONERROR);
 		}
+		return(0);
 	}
 	
 //	public static void 
