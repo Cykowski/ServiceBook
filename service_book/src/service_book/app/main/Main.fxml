@@ -63,9 +63,9 @@
          <center>
             <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <content>
-                  <ImageView fitHeight="122.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="336.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../resources/images/pl.jpg" />
+                        <Image url="@../../../../resources/images/bike-types.jpg" />
                      </image>
                   </ImageView>
                </content>
