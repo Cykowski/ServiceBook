@@ -6,14 +6,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import service_book.app.part.Part;
 import service_book.app.props.Props;
-import service_book.control.AppConfig;
 import service_book.control.DbConn;
-import service_book.control.Mess;
 import service_book.vehicle.Vehicle;
 
 public class MainController implements Initializable{

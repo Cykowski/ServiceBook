@@ -16,7 +16,6 @@ public class TestPart {
 		Part part = new Part();
 		part.setServicePrice(new BigDecimal("0.123"));
 		Assert.assertEquals("0.12" ,part.getServicePrice().toString());
-//		fail("Not yet implemented");
 
 		part = new Part();
 		part.setServicePrice(new BigDecimal("0.128"));

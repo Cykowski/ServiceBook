@@ -52,10 +52,7 @@ public class DbConn {
 			alert.setHeaderText("Connection error :(");
 //			alert.setContentText("");
 			alert.showAndWait();
-		}
-			
-
-		
+		}		
 	}
 	
 	
@@ -65,6 +62,7 @@ public class DbConn {
 			Mess.setInfoMessage("Check DB Connection properties");
 			return(service_book.Book.CONFIGERROR);
 		}
+		
 		try{
 			Class.forName(JDBC_Driver);
 			connId = DriverManager.getConnection(DB_URL, USER, PASS);

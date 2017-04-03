@@ -57,9 +57,7 @@ public class AppConfig {
 		}
 		return(0);
 	}
-	
-//	public static void 
-	
+		
 	
 	
 }
